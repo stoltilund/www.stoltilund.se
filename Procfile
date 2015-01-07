@@ -1,1 +1,1 @@
-web: gunicorn stoltilund:app --log-file=-
+web: gunicorn stoltilund.app --log-file=-
