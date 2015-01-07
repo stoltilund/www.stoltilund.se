@@ -1,2 +1,2 @@
-web: python runserver.py
+web:gunicorn stoltilund:app --log-file -
 
