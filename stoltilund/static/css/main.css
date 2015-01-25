@@ -290,6 +290,16 @@ nav img {
     }
 
 /* ========================
+    INTERMEDIATE: Header
+   ======================== */
+
+    #header-quote {
+    display: inline;
+    padding-left: 3em;
+    padding-right: 1em;
+}
+
+/* ========================
     INTERMEDIATE: IE Fixes
    ======================== */
 
