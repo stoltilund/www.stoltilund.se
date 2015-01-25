@@ -1,37 +1,13 @@
-    <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Stolt i Lund</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends 'base.html' %}
 
-        <link rel="stylesheet" href="static/css/normalize.min.css">
-        <link rel="stylesheet" href="static/css/main.css">
+{% block title %} {{ title|e|title|default('Stolt i Lund') }} {% endblock %}
 
-        <script src="static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
+{% block body %}
         <div class="header-container">
             <div class="header-overlay">
                 <header class="wrapper clearfix">
                     <h1 class="title hidden">Stolt i Lund</h1>
-                    <nav>
-                        <img class="logo" id="menulogo" src="static/img/logo/LOGO_stoltilund_WHITE.svg">
-                        <ul>
-                            <li><a href="http://blogg.stoltilund.se">Blogg</a></li>
-                            <li><a href="http://press.stoltilund.se">Press</a></li>
-                            <li><a href="http://stoltilund.se/om">Om</a></li>
-                        </ul>
-                    </nav>
+                    {% include 'nav.html' %}
                 </header>
                 <blockquote class="mainquote" id="header-quote">Lunds pridedag sätter färg på tillvaron i
                     staden under maj månad.
@@ -74,5 +50,5 @@
 
         <script src="static/js/plugins.js"></script>
         <script src="static/js/main.js"></script>
-    </body>
-</html>
+
+{% endblock %}
